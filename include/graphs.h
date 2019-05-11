@@ -12,8 +12,7 @@
 #include <SFML/Graphics.h>
 #include <stdlib.h>
 #include "my_vector.h"
-
-enum owner {NEUTRAL, PLAYER1, PLAYER2};
+#include "assets.h"
 
 struct node {
     vector_t *links;
@@ -21,6 +20,7 @@ struct node {
     int owner;
     int defense;
     int attack;
+    sfSprite *sprites[3][3];
 };
 typedef struct node node_t;
 
@@ -33,8 +33,12 @@ typedef struct graph graph_t;
 graph_t *graph_create(void);
 void graph_destroy(graph_t *graph);
 
+// graph_draw_engine.c
+void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph);
+
 // node.c
-node_t *node_create(void);
+node_t *node_create(int x, int y, assets_t *assets);
+void sfRenderwindow_drawNode(sfRenderWindow *window, node_t *node);
 void node_destroy(node_t *node);
 
 // node_operation.c

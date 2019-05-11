@@ -21,6 +21,7 @@ int main(void)
 {
     game_t *game = game_create(init_window());
 
+    vector_push_back(game->graph->nodes, node_create(100, 100, game->assets));
     game_loop(game);
     game_destroy(game);
     return (0);
