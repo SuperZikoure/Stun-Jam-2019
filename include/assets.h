@@ -23,5 +23,4 @@ typedef struct assets assets_t;
 assets_t *assets_create(void);
 void assets_destroy(assets_t *assets);
 
-
 #endif /* !ASSETS_H_ */

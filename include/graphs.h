@@ -11,8 +11,13 @@
 #include <SFML/Window.h>
 #include <SFML/Graphics.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include <math.h>
+#include <stdio.h>
 #include "my_vector.h"
 #include "assets.h"
+
+#define NODE_SIZE 36
 
 struct node {
     vector_t *links;
@@ -38,10 +43,17 @@ void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph);
 
 // node.c
 node_t *node_create(int x, int y, assets_t *assets);
-void sfRenderwindow_drawNode(sfRenderWindow *window, node_t *node);
+void sfRenderWindow_drawNode(sfRenderWindow *window, node_t *node);
 void node_destroy(node_t *node);
 
 // node_operation.c
 void node_create_link(node_t *node1, node_t *node2);
+
+// node_event.c
+bool node_isHover(node_t *node, sfRenderWindow *window);
+bool node_isClicked(node_t *node, sfRenderWindow *window);
+
+// graph_draw_tools.c
+void sfRenderWindow_drawLine(sfRenderWindow *window, sfVector2f pos1, sfVector2f pos2);
 
 #endif /* !GRAPHS_H_ */

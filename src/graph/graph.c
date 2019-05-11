@@ -17,5 +17,10 @@ graph_t *graph_create(void)
 
 void graph_destroy(graph_t *graph)
 {
+    while (graph->nodes->start) {
+        node_destroy((node_t*)graph->nodes->start->content);
+        vector_pop_top(graph->nodes);
+    }
+    free(graph->nodes);
     free(graph);
 }
