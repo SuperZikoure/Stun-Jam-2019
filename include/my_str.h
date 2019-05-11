@@ -30,6 +30,7 @@ my_bool_t my_strcmp(char const *s1, char const *s2);
 
 char *my_strcpy(char *dest, char const *str);
 char *my_strncpy(char *dest, char const *src, int n);
+char *my_strcat_no_free(const char *left, const char *right);
 char *my_strcat(char **s1, char const *s2);
 char *my_strncat(char **s1, char const *s2, int n);
 char *my_strdup(char const *src);

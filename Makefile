@@ -48,7 +48,15 @@ SRC			=	asset/assets.c \
 				graph/graph_draw_engine.c \
 				graph/node_event.c \
 				graph/graph_draw_tools.c \
-				graph/graph_operation.c
+				graph/graph_operation.c \
+				fetch/fetch_anim.c \
+				fetch/fetch_image.c \
+				screenshots/do_screenshot.c \
+				get_delta.c \
+				scene_system.c \
+				global_info.c \
+				game_loop.c \
+				analyse_events.c
 
 SRC_LIB		=	graphmy \
 				graph \
@@ -57,6 +65,7 @@ SRC_LIB		=	graphmy \
 				csfml-graphics \
 				csfml-window \
 				csfml-audio \
+				csfml-system \
 				m
 
 LIB_PATHS	=	chainmy_lib \

@@ -10,6 +10,12 @@
 
 #include <SFML/Graphics.h>
 
+/* STR */
+#define IS_LOWER(c) (c >= 'a' && c <= 'z')
+#define IS_UPPER(c) (c >= 'A' && c <= 'Z')
+#define IS_NUMBER(c) (c >= '0' && c <= '9')
+#define IS_ALPHA(c) (IS_LOWER(c) || IS_UPPER(c) || IS_NUMBER(c))
+
 /* SFML */
 #define V2F(x, y) (sfVector2f){x, y}
 #define V2I(x, y) (sfVector2i){x, y}
