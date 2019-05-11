@@ -41,9 +41,16 @@ void sfRenderWindow_drawNode(sfRenderWindow *window, node_t *node)
     sfRenderWindow_drawSprite(window, to_draw, NULL);
 }
 
-void sfRenderWindow_drawLink(sfRenderWindow *window, node_t *node1, node_t *node2)
+void sfRenderWindow_drawNodelink(sfRenderWindow *window, node_t *node)
 {
-    sfRenderWindow_drawLine(window, node1->pos, node2->pos);
+    link_t *current = node->links->start;
+    node_t *current_content;
+
+    while (current) {
+        current_content = (node_t*)current->content;
+        sfRenderWindow_drawLine(window, node->pos, current_content->pos);
+        current = current->next;
+    }
 }
 
 void node_destroy(node_t *node)

@@ -44,6 +44,7 @@ void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph);
 // node.c
 node_t *node_create(int x, int y, assets_t *assets);
 void sfRenderWindow_drawNode(sfRenderWindow *window, node_t *node);
+void sfRenderWindow_drawNodelink(sfRenderWindow *window, node_t *node);
 void node_destroy(node_t *node);
 
 // node_operation.c

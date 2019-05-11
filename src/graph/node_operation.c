@@ -9,6 +9,6 @@
 
 void node_create_link(node_t *node1, node_t *node2)
 {
-    vector_push_back(node1->links, node2);
+    //vector_push_back(node1->links, node2);
     vector_push_back(node2->links, node1);
 }
