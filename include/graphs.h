@@ -17,6 +17,7 @@ enum owner {NEUTRAL, PLAYER1, PLAYER2};
 
 struct node {
     vector_t *links;
+    sfVector2f pos;
     int owner;
     int defense;
     int attack;
@@ -35,5 +36,8 @@ void graph_destroy(graph_t *graph);
 // node.c
 node_t *node_create(void);
 void node_destroy(node_t *node);
+
+// node_operation.c
+void node_create_link(node_t *node1, node_t *node2);
 
 #endif /* !GRAPHS_H_ */
