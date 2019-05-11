@@ -19,7 +19,7 @@ static sfMusic *quick_music_create(char *path, float vol)
     return music;
 }
 
-music_t *load_music(char *main_path, char *cover_path)
+music_t *load_music(char *main_path)
 {
     music_t *music = malloc(sizeof(music_t));
 
@@ -28,25 +28,16 @@ music_t *load_music(char *main_path, char *cover_path)
     music->main = quick_music_create(main_path, BASE_VOLUME);
     if (!music->main)
         return NULL;
-    if (cover_path) {
-        music->cover = quick_music_create(cover_path, 0);
-        if (!music->cover)
-            return NULL;
-    } else
-        music->cover = NULL;
     return music;
 }
 
 void start_music(music_t *music)
 {
     sfMusic_play(music->main);
-    if (music->cover)
-        sfMusic_play(music->cover);
 }
 
 void destroy_music(music_t *music)
 {
     sfMusic_destroy(music->main);
-    sfMusic_destroy(music->cover);
     free(music);
 }

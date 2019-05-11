@@ -65,7 +65,6 @@ typedef struct keypress_s
 
 typedef struct music_s {
     sfMusic *main;
-    sfMusic *cover;
 } music_t;
 
 /* WINDOW */
@@ -101,7 +100,7 @@ sound_t *create_sound(char *path);
 void destroy_sound(sound_t *sound);
 
 /* MUSIC */
-music_t *load_music(char *main_path, char *cover_path);
+music_t *load_music(char *main_path);
 void start_music(music_t *music);
 void destroy_music(music_t *music);
 
