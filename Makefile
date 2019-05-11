@@ -42,12 +42,14 @@ SRC_PATH	=	$(ROOT_PATH)$(SRC_NAME)
 
 SRC			=	asset/assets.c \
 				game/game.c \
+				game/game_init.c \
 				graph/graph.c \
 				graph/node.c \
 				graph/node_operation.c \
 				graph/graph_draw_engine.c \
 				graph/node_event.c \
 				graph/graph_draw_tools.c \
+				graph/graph_event.c \
 				graph/graph_operation.c \
 				fetch/fetch_anim.c \
 				fetch/fetch_image.c \
@@ -62,7 +64,12 @@ SRC			=	asset/assets.c \
 				buttons/find_button.c \
 				buttons/manage_button.c \
 				button_functions/functions.c \
-				scenes/main_menu/manage_main_menu.c
+				scenes/main_menu/manage_main_menu.c \
+				scenes/how_to_play/manage_htp.c \
+				scenes/pause/manage_pause.c \
+				scenes/game/manage_game.c \
+				scenes/win/manage_win.c \
+				scenes/credits/manage_credits.c
 
 SRC_LIB		=	graphmy \
 				graph \

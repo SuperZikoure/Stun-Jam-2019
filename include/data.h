@@ -25,7 +25,9 @@ typedef struct info_button_s info_button_t;
 #define DELETE -1
 #define SCREENSHOT_FILENAME_MAX 10
 #define BUTTON_PATH ("assets/buttons/")
-#define BUTTON_AMOUNT 1
+#define BUTTON_AMOUNT 5
+
+#define TV_POS V2F(768, 328)
 
 struct info_anim_s
 {
@@ -74,6 +76,9 @@ enum enum_music_e
 
 enum enum_images_e {
     MENU_BG,
+    GAME_BG,
+    BLACK_BG,
+    TV_BG,
     IMAGE_AMOUNT
 };
 

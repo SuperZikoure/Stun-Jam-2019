@@ -1,18 +1,12 @@
-/*
-** EPITECH PROJECT, 2019
-** MUL_my_rpg_2018
-** File description:
-** scene_system
-*/
-
 #include "game.h"
 
 const scene_swap_t scenes[SCENE_NB] = {
     manage_menu,
-    NULL,
-    NULL,
-    NULL,
-    NULL
+    manage_htp,
+    manage_game,
+    manage_pause,
+    manage_win,
+    manage_credits
 };
 
 static enum enum_scene_e fetch_scene_id(enum enum_scene_e flag)

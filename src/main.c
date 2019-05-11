@@ -23,8 +23,12 @@ static game_t create_game(void)
     for (int i = 0; i < BUTTON_AMOUNT; i++) {
         game.buttons[i] = create_button(&info[i], game.window);
     }
+    game.assets = assets_create();
+    game.graph = graph_create();
+    game_fill_graph(&game);
     game.mouse_pos = V2I(0, 0);
     game.sound = 1;
+    game.should_exit = false;
     game.exit = 0;
     return (game);
 
@@ -51,6 +55,7 @@ static int game_main(void)
     if (game.exit == -1)
         return 84;
     //destroy_game(&game);
+    game_destroy(game);
     return 0;
 }
 

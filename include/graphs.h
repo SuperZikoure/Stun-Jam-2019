@@ -32,6 +32,7 @@ typedef struct node node_t;
 
 struct graph {
     vector_t *nodes;
+    node_t *selected;
 };
 typedef struct graph graph_t;
 
@@ -44,6 +45,9 @@ void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph);
 
 // graph_operation.c
 node_t *graph_get_node_by_id(graph_t *graph, int id);
+
+// graph_event.c
+void graph_event_clicked(graph_t *graph, sfRenderWindow *window);
 
 // node.c
 node_t *node_create(int x, int y, assets_t *assets);

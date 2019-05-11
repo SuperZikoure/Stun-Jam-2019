@@ -33,16 +33,10 @@ struct game_s {
     sound_t *sounds[SOUND_AMOUNT];
     button_t *buttons[BUTTON_AMOUNT];
     sfVector2i mouse_pos;
+    bool should_exit;
     int sound;
     int exit;
 };
-
-// game.c
-game_t *game_create(sfRenderWindow *window);
-void game_loop(game_t *game);
-void game_draw(game_t *game);
-void game_event(game_t *game);
-void game_destroy(game_t *game);
 
 /* fetch_anim.c */
 anim_t *get_anim(int index);
@@ -76,13 +70,72 @@ void show_scene_buttons(game_t *game);
 
 /* BUTTONS FUNCTIONS */
 int exit_game(game_t *game, int a);
+int put_scene(game_t *game, int a);
 
 /* INTERSECTIONS */
 int image_intersect(image_t *img1, image_t *img2);
 int point_intersect(image_t *img, float x, float y);
 int text_intersect(sfText *text, image_t *image);
 
+#define NB_NODE 17
+static const sfVector2i pos_nodes[] = {
+                                    {120, 60},
+                                    {250, 120},
+                                    {390, 60},
+                                    {550, 80},
+                                    {56, 185},
+                                    {115, 300},
+                                    {365, 260},
+                                    {497, 212},
+                                    {600, 315},
+                                    {50, 435},
+                                    {300, 410},
+                                    {480, 400},
+                                    {635, 480},
+                                    {80, 600},
+                                    {240, 560},
+                                    {430, 530},
+                                    {580, 600}
+};
+
+void game_fill_graph(game_t *game);
+void game_destroy(game_t game);
+
+// SCENES // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 /* MENU */
 int manage_menu(game_t *game);
+void update_menu(game_t *game);
+void display_menu(game_t *game);
+
+
+/* HOW TO PLAY */
+int manage_htp(game_t *game);
+void update_htp(game_t *game);
+void display_htp(game_t *game);
+
+
+/* GAME */
+int manage_game(game_t *game);
+void update_game(game_t *game);
+void display_game(game_t *game);
+
+
+/* PAUSE */
+int manage_pause(game_t *game);
+void update_pause(game_t *game);
+void display_pause(game_t *game);
+
+
+/* WIN */
+int manage_win(game_t *game);
+void update_win(game_t *game);
+void display_win(game_t *game);
+
+
+/* CREDITS */
+int manage_credits(game_t *game);
+void update_credits(game_t *game);
+void display_credits(game_t *game);
 
 #endif /* !GAME_H_ */

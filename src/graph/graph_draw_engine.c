@@ -23,4 +23,9 @@ void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph)
         sfRenderWindow_drawNode(window, current_content);
         current = current->next;
     }
+    if (graph->selected != NULL) {
+        sfSprite *to_draw = graph->selected->sprites[graph->selected->owner][CLICKED];
+        sfSprite_setPosition(to_draw, graph->selected->pos);
+        sfRenderWindow_drawSprite(window, to_draw, NULL);
+    }
 }

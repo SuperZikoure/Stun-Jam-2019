@@ -22,6 +22,7 @@ graph_t *graph_create(void)
     graph_t *new = smalloc(sizeof(graph_t));
 
     new->nodes = vector_create();
+    new->selected = NULL;
     return (new);
 }
 
