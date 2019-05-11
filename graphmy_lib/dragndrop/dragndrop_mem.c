@@ -7,10 +7,20 @@
 
 #include "my_dragndrop.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 dragndrop_t *dragndrop_create(sfTexture *idle, sfTexture *dragged,
 sfTexture *img_dragged)
 {
-    dragndrop_t *drag = malloc(sizeof(dragndrop_t));
+    dragndrop_t *drag = smalloc(sizeof(dragndrop_t));
 
     drag->state_img[0] = sfSprite_create();
     drag->state_img[1] = sfSprite_create();

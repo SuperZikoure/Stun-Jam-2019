@@ -25,7 +25,6 @@ enum {IDLE_DRAG, DRAGGED};
 struct dragndrop {
     sfSprite *state_img[2];
     sfSprite *drag_img;
-
     sfVector2f pos;
     sfVector2f scale_bt;
     sfVector2f scale_dragged;

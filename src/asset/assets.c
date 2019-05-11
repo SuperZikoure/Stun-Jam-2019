@@ -7,6 +7,16 @@
 
 #include "assets.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 static void load_node_assets(assets_t *assets)
 {
     assets->nodes[NEUTRAL][IDLE] = sfTexture_createFromFile("assets/nodes/green_node0.png", NULL);
@@ -22,7 +32,7 @@ static void load_node_assets(assets_t *assets)
 
 assets_t *assets_create(void)
 {
-    assets_t *new = malloc(sizeof(assets_t));
+    assets_t *new = smalloc(sizeof(assets_t));
 
     load_node_assets(new);
     return (new);

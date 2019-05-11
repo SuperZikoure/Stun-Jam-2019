@@ -44,4 +44,3 @@ void dragndrop_event(dragndrop_t *drag, sfRenderWindow *window)
         drag->last_pos_released = sfMouse_getPositionRenderWindow(window);
     }
 }
-

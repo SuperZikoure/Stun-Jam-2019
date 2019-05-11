@@ -7,9 +7,19 @@
 
 #include "graphs.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 graph_t *graph_create(void)
 {
-    graph_t *new = malloc(sizeof(graph_t));
+    graph_t *new = smalloc(sizeof(graph_t));
 
     new->nodes = vector_create();
     return (new);

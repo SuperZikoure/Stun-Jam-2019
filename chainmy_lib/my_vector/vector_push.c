@@ -7,9 +7,19 @@
 
 #include "my_vector.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 vector_t *vector_create(void)
 {
-    vector_t *new = malloc(sizeof(vector_t));
+    vector_t *new = smalloc(sizeof(vector_t));
 
     if (!new)
         return (NULL);

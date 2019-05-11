@@ -6,10 +6,22 @@
 */
 
 #include "my_link.h"
+#include <stdlib.h>
+#include <stddef.h>
+
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
 
 link_t *link_create(void *content)
 {
-    link_t *link = malloc(sizeof(link_t));
+    link_t *link = smalloc(sizeof(link_t));
 
     if (!link)
         return (NULL);
