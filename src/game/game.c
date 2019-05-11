@@ -7,6 +7,7 @@
 
 #include "game.h"
 
+
 static void *smalloc(size_t size)
 {
     void *ret;
@@ -23,8 +24,10 @@ game_t *game_create(sfRenderWindow *window)
 
     new->assets = assets_create();
     new->graph = graph_create();
+    game_fill_graph(new);
     new->window = window;
     new->should_exit = false;
+    new->debug_mode = false;
     return (new);
 }
 
@@ -32,6 +35,8 @@ void game_loop(game_t *game)
 {
     while (sfRenderWindow_isOpen(game->window) && !game->should_exit) {
         game_event(game);
+        if (game->debug_mode)
+            game_debug(game);
         game_draw(game);
     }
 }
@@ -59,4 +64,11 @@ void game_destroy(game_t *game)
     assets_destroy(game->assets);
     graph_destroy(game->graph);
     free(game);
+}
+
+void game_debug(game_t *game)
+{
+    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
+
+    printf("mouse> x: %d || y: %d\n", mouse.x, mouse.y);
 }
