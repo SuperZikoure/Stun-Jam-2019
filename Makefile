@@ -50,6 +50,7 @@ SRC			=	asset/assets.c \
 				graph/graph_draw_tools.c
 
 SRC_LIB		=	graphmy \
+				graph \
 				stringmy \
 				chainmy \
 				csfml-graphics \
@@ -59,7 +60,8 @@ SRC_LIB		=	graphmy \
 
 LIB_PATHS	=	chainmy_lib \
 				stringmy_lib \
-				graphmy_lib
+				graphmy_lib \
+				graph_lib \
 
 SRCS	=	$(SRC:%=$(SRC_PATH)/%) $(SRC_PATH)/main.c
 OBJ	=	$(SRCS:.c=.o)
