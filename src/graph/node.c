@@ -20,6 +20,7 @@ static void *smalloc(size_t size)
 node_t *node_create(int x, int y, assets_t *assets)
 {
     node_t *new = smalloc(sizeof(node_t));
+    static int id = 0;
 
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
@@ -27,6 +28,8 @@ node_t *node_create(int x, int y, assets_t *assets)
             sfSprite_setTexture(new->sprites[i][j], assets->nodes[i][j], sfTrue);
         }
     }
+    new->id = id;
+    id++;
     new->owner = NEUTRAL;
     new->defense = 0;
     new->attack = 0;
@@ -51,9 +54,16 @@ void sfRenderWindow_drawNode(sfRenderWindow *window, node_t *node)
     sfRenderWindow_drawSprite(window, to_draw, NULL);
 }
 
-void sfRenderWindow_drawLink(sfRenderWindow *window, node_t *node1, node_t *node2)
+void sfRenderWindow_drawNodelink(sfRenderWindow *window, node_t *node)
 {
-    sfRenderWindow_drawLine(window, node1->pos, node2->pos);
+    link_t *current = node->links->start;
+    node_t *current_content;
+
+    while (current) {
+        current_content = (node_t*)current->content;
+        sfRenderWindow_drawLine(window, node->pos, current_content->pos);
+        current = current->next;
+    }
 }
 
 void node_destroy(node_t *node)

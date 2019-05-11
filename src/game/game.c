@@ -40,7 +40,6 @@ void game_draw(game_t *game)
 {
     sfRenderWindow_clear(game->window, sfBlack);
     sfRenderWindow_drawGraph(game->window, game->graph);
-    sfRenderWindow_drawLine(game->window, ((node_t*)game->graph->nodes->start->content)->pos, ((node_t*)game->graph->nodes->start->next->content)->pos);
     sfRenderWindow_display(game->window);
 }
 
