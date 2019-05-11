@@ -42,7 +42,10 @@ SRC_PATH	=	$(ROOT_PATH)$(SRC_NAME)
 
 SRC			=	asset/assets.c \
 				game/game.c \
-				graph/graph.c
+				graph/graph.c \
+				graph/node.c \
+				graph/node_operation.c \
+				graph/graph_draw_engine.c
 
 SRC_LIB		=	graphmy \
 				stringmy \

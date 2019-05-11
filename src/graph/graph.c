@@ -11,6 +11,7 @@ graph_t *graph_create(void)
 {
     graph_t *new = malloc(sizeof(graph_t));
 
+    new->nodes = vector_create();
     return (new);
 }
 

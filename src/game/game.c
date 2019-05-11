@@ -29,7 +29,7 @@ void game_loop(game_t *game)
 void game_draw(game_t *game)
 {
     sfRenderWindow_clear(game->window, sfBlack);
-
+    sfRenderWindow_drawGraph(game->window, game->graph);
     sfRenderWindow_display(game->window);
 }
 
