@@ -17,7 +17,6 @@ void sfRenderWindow_drawLine(sfRenderWindow *window, sfVector2f pos1, sfVector2f
     int len = sqrt(pow(pos2.x - pos1.x, 2) + pow(pos2.y - pos1.y, 2));
 
     float angle = 90 - DEG(atan2(pos2.x - pos1.x, pos2.y - pos1.y));
-    printf("%f\n", angle);
     sfRectangleShape_setSize(line, (sfVector2f){len, 6});
     sfRectangleShape_setOrigin(line, (sfVector2f){0, 3});
     sfRectangleShape_setPosition(line, pos1);

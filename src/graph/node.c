@@ -20,6 +20,7 @@ static void *smalloc(size_t size)
 node_t *node_create(int x, int y, assets_t *assets)
 {
     node_t *new = smalloc(sizeof(node_t));
+    static int id = 0;
 
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
@@ -27,6 +28,8 @@ node_t *node_create(int x, int y, assets_t *assets)
             sfSprite_setTexture(new->sprites[i][j], assets->nodes[i][j], sfTrue);
         }
     }
+    new->id = id;
+    id++;
     new->owner = NEUTRAL;
     new->defense = 0;
     new->attack = 0;
