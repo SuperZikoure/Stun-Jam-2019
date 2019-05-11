@@ -40,9 +40,20 @@ INCL_PATH	=	$(ROOT_PATH)$(INCL_NAME)
 TESTS_PATH	=	$(ROOT_PATH)$(TESTS_NAME)
 SRC_PATH	=	$(ROOT_PATH)$(SRC_NAME)
 
-SRC			=	
-SRC_LIB		=	
-LIB_PATHS	=	
+SRC			=	asset/assets.c \
+				game/game.c \
+				graph/graph.c
+
+SRC_LIB		=	graphmy \
+				stringmy \
+				chainmy \
+				csfml-graphics \
+				csfml-window \
+				csfml-audio
+
+LIB_PATHS	=	chainmy_lib \
+				stringmy_lib \
+				graphmy_lib
 
 SRCS	=	$(SRC:%=$(SRC_PATH)/%) $(SRC_PATH)/main.c
 OBJ	=	$(SRCS:.c=.o)
