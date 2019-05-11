@@ -25,12 +25,25 @@ node_t *node_create(int x, int y, assets_t *assets)
     return (new);
 }
 
-void sfRenderwindow_drawNode(sfRenderWindow *window, node_t *node)
+void sfRenderWindow_drawNode(sfRenderWindow *window, node_t *node)
 {
-    sfSprite *to_draw = node->sprites[node->owner][IDLE];
+    sfSprite *to_draw;
+    int state;
 
+    if (node_isClicked(node, window))
+        state = CLICKED;
+    else if (node_isHover(node, window))
+        state = HOVER;
+    else
+        state = IDLE;
+    to_draw = node->sprites[node->owner][state];
     sfSprite_setPosition(to_draw, node->pos);
     sfRenderWindow_drawSprite(window, to_draw, NULL);
+}
+
+void sfRenderWindow_drawLink(sfRenderWindow *window, node_t *node1, node_t *node2)
+{
+    sfRenderWindow_drawLine(window, node1->pos, node2->pos);
 }
 
 void node_destroy(node_t *node)

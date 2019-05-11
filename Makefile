@@ -29,7 +29,7 @@ LIGHT_MAGEN	=	"\e[95m"
 LIGHT_CYAN	=	"\e[96m"
 LINE_RETURN	=	$(ECHO) ""
 
-NAME	=	game
+NAME		=	game
 COLOR_THEME	=	$(YELLO_C)
 
 ROOT_PATH	=	./
@@ -45,14 +45,17 @@ SRC			=	asset/assets.c \
 				graph/graph.c \
 				graph/node.c \
 				graph/node_operation.c \
-				graph/graph_draw_engine.c
+				graph/graph_draw_engine.c \
+				graph/node_event.c \
+				graph/graph_draw_tools.c
 
 SRC_LIB		=	graphmy \
 				stringmy \
 				chainmy \
 				csfml-graphics \
 				csfml-window \
-				csfml-audio
+				csfml-audio \
+				m
 
 LIB_PATHS	=	chainmy_lib \
 				stringmy_lib \

@@ -14,7 +14,7 @@ void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph)
 
     while (current) {
         current_content = (node_t*)current->content;
-        sfRenderwindow_drawNode(window, current_content);
+        sfRenderWindow_drawNode(window, current_content);
         current = current->next;
     }
 }
