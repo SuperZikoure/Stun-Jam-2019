@@ -10,8 +10,11 @@
 
 static int display_window(window_t *window)
 {
-    //if (KEY_PRESSED(SCREENSHOT_KEY))
-    //    do_screenshot(window);
+    sfEvent event;
+
+    sfRenderWindow_pollEvent(window->window, &event);
+    if (event.type == sfEvtKeyPressed && sfKeyboard_isKeyPressed(sfKeyF12))
+        do_screenshot(window);
     sfRenderWindow_display(window->window);
     return 0;
 }

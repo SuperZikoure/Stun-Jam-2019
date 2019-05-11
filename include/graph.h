@@ -105,4 +105,7 @@ music_t *load_music(char *main_path, char *cover_path);
 void start_music(music_t *music);
 void destroy_music(music_t *music);
 
+/* SCREENSHOTS */
+int do_screenshot(window_t *window);
+
 #endif
