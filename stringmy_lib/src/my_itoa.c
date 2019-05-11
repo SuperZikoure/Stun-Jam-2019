@@ -7,6 +7,16 @@
 
 #include "my_str.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 static long counter_set(int nb)
 {
     long counter = 10000000000000;
@@ -35,7 +45,7 @@ static int malloc_size(int nb)
 
 char *my_itoa(int nb)
 {
-    char *buff = malloc(sizeof(int) * (malloc_size(nb) + 1));
+    char *buff = smalloc(sizeof(int) * (malloc_size(nb) + 1));
     int i = (nb < 0) ? 1 : 0;
     long counter = counter_set(nb);
 

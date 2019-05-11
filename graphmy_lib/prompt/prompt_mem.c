@@ -7,9 +7,19 @@
 
 #include "my_prompt.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 my_prompt_t *my_prompt_create(sfTexture *background)
 {
-    my_prompt_t *new = malloc(sizeof(my_prompt_t));
+    my_prompt_t *new = smalloc(sizeof(my_prompt_t));
 
     new->background = sfSprite_create();
     sfSprite_setTexture(new->background, background, sfTrue);

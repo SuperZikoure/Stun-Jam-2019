@@ -7,9 +7,19 @@
 
 #include "graphs.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 node_t *node_create(int x, int y, assets_t *assets)
 {
-    node_t *new = malloc(sizeof(node_t));
+    node_t *new = smalloc(sizeof(node_t));
 
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {

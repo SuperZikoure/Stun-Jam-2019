@@ -7,9 +7,19 @@
 
 #include "game.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 game_t *game_create(sfRenderWindow *window)
 {
-    game_t *new = malloc(sizeof(game_t));
+    game_t *new = smalloc(sizeof(game_t));
 
     new->assets = assets_create();
     new->graph = graph_create();

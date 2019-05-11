@@ -7,10 +7,20 @@
 
 #include "my_button.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 my_button_t *my_button_create(sfTexture *idle, sfTexture *hover, 
                             sfTexture *clicked)
 {
-    my_button_t *new = malloc(sizeof(my_button_t));
+    my_button_t *new = smalloc(sizeof(my_button_t));
 
     for (int i = 0; i < 3; i++)
         new->sprites[i] = sfSprite_create();

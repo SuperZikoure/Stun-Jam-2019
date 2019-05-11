@@ -7,10 +7,20 @@
 
 #include "my_animated_sprite.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 animated_sprite_t *animated_sprite_create(sfTexture const *texture, int nb, 
                                 sfIntRect const *coords, float timer_anim)
 {
-    animated_sprite_t *animated = malloc(sizeof(animated_sprite_t));
+    animated_sprite_t *animated = smalloc(sizeof(animated_sprite_t));
 
     animated->sprites = malloc(sizeof(sfSprite*) * nb);
     for (int i = 0; i < nb; i++){

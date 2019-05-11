@@ -7,6 +7,16 @@
 
 #include "my_str.h"
 
+static void *smalloc(size_t size)
+{
+    void *ret;
+
+    ret = malloc(size);
+    if (!ret)
+        exit(84);
+    return (ret);
+}
+
 static int first_str_occurence(char *str, char const *to_find)
 {
     int size = my_strlen(to_find);
@@ -23,7 +33,7 @@ static int first_str_occurence(char *str, char const *to_find)
 char *my_strreplace(char **str, char const *to_find, char const *substitute)
 {
     int size = my_strlen(*str) + my_strlen(substitute) - my_strlen(to_find);
-    char *new_str = malloc(sizeof(char) * (size + 1));
+    char *new_str = smalloc(sizeof(char) * (size + 1));
     int offset = first_str_occurence(*str, to_find);
     if (offset == -1)
         return *str;
