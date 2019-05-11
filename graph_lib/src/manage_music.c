@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "graph.h"
 
-static sfMusic *quick_music_create(char *path, float vol)
+static sfMusic *quick_music_create(const char *path, float vol)
 {
     sfMusic *music = sfMusic_createFromFile(path);
 
@@ -19,7 +19,7 @@ static sfMusic *quick_music_create(char *path, float vol)
     return music;
 }
 
-music_t *load_music(char *main_path)
+music_t *load_music(const char *main_path)
 {
     music_t *music = malloc(sizeof(music_t));
 

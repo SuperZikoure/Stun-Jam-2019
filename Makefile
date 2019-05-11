@@ -56,7 +56,13 @@ SRC			=	asset/assets.c \
 				scene_system.c \
 				global_info.c \
 				game_loop.c \
-				analyse_events.c
+				analyse_events.c \
+				manage_intersections.c \
+				buttons/create_button.c \
+				buttons/find_button.c \
+				buttons/manage_button.c \
+				button_functions/functions.c \
+				scenes/main_menu/manage_main_menu.c
 
 SRC_LIB		=	graphmy \
 				graph \
@@ -80,7 +86,6 @@ LIB_PATHS_FLAG	=	$(LIB_PATHS:%=-L$(ROOT_PATH)%)
 
 CFLAGS	=	-Wall \
 			-Wextra \
-			-Werror \
 			-I $(INCL_PATH) \
 			$(LIB_PATHS_FLAG) \
 			$(LIBRARIES)

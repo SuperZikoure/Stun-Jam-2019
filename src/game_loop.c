@@ -7,18 +7,6 @@
 
 #include "game.h"
 
-
-static int display_window(window_t *window)
-{
-    sfEvent event;
-
-    sfRenderWindow_pollEvent(window->window, &event);
-    if (event.type == sfEvtKeyPressed && sfKeyboard_isKeyPressed(sfKeyF12))
-        do_screenshot(window);
-    sfRenderWindow_display(window->window);
-    return 0;
-}
-
 void game_loop(game_t *game)
 {
     start_clock();
@@ -33,7 +21,8 @@ void game_loop(game_t *game)
         sfRenderWindow_clear(game->window->window, sfBlack);
         if (get_scene()(game) == -1)
             game->exit = -1;
-        display_window(game->window);
+        show_scene_buttons(game);
+        sfRenderWindow_display(game->window->window);
     }
     if (sfRenderWindow_isOpen(game->window->window))
         sfRenderWindow_close(game->window->window);

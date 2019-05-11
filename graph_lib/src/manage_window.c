@@ -29,7 +29,7 @@ static int fill_window(window_t *win, int size, bool fullscreen)
     sfRenderWindow_display(win->window);
     sfRenderWindow_setFramerateLimit(win->window, 60);
     sfRenderWindow_setVerticalSyncEnabled(win->window, sfTrue);
-    sfRenderWindow_setMouseCursorVisible(win->window, sfFalse);
+    //sfRenderWindow_setMouseCursorVisible(win->window, sfFalse);
     return 0;
 }
 

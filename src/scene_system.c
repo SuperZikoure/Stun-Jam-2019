@@ -8,7 +8,7 @@
 #include "game.h"
 
 const scene_swap_t scenes[SCENE_NB] = {
-    NULL,
+    manage_menu,
     NULL,
     NULL,
     NULL,

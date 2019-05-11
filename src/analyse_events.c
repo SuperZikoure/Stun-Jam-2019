@@ -16,6 +16,8 @@ int analyse_events(game_t *game)
             sfRenderWindow_close(game->window->window);
             return 1;
         }
+    if (event.type == sfEvtKeyPressed && sfKeyboard_isKeyPressed(sfKeyF12))
+        do_screenshot(game->window);
     }
     return 0;
 }

@@ -9,6 +9,7 @@
 #define MACROS_H_
 
 #include <SFML/Graphics.h>
+#include "my_str.h"
 
 /* STR */
 #define IS_LOWER(c) (c >= 'a' && c <= 'z')
@@ -24,6 +25,7 @@
 #define COLOR(r, g, b, a) (sfColor){r, g, b, a}
 #define IRECT(l, t, w, h) (sfIntRect){l, t, w, h}
 
+#define STR_EQ(s1, s2) (!my_strcmp(s1, s2))
 
 #define DESTROY_SPRITE_TEXTURE(s) \
             sfTexture_destroy((sfTexture *) sfSprite_getTexture(s));

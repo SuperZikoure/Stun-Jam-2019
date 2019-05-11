@@ -20,9 +20,12 @@
 typedef struct game_s game_t;
 typedef struct info_anim_s info_anim_t;
 typedef int (*scene_swap_t)(game_t *);
+typedef struct info_button_s info_button_t;
 
 #define DELETE -1
 #define SCREENSHOT_FILENAME_MAX 10
+#define BUTTON_PATH ("assets/buttons/")
+#define BUTTON_AMOUNT 1
 
 struct info_anim_s
 {
@@ -33,6 +36,7 @@ struct info_anim_s
 
 enum enum_scene_e {
     MAIN_MENU,
+    HOW_TO_PLAY,
     GAME,
     PAUSE,
     WIN,
@@ -40,40 +44,67 @@ enum enum_scene_e {
     SCENE_NB
 };
 
+struct info_button_s
+{
+    sfVector2f pos;
+    int option;
+    enum enum_scene_e scene;
+    char *path;
+    int (*trigger)(game_t *, int);
+};
+
 enum enum_text_e
 {
-    TEXT1,
+    TEXT,
     TEXT_AMOUNT
 };
 
 enum enum_sound_e
 {
-    SOUND1,
+    CLICK_FX,
     SOUND_AMOUNT
 };
 
 
 enum enum_music_e
 {
-    MUSIC1,
+    MENU_MUSIC,
     MUSIC_AMOUNT
 };
 
 enum enum_images_e {
-    IMAGE_1,
+    MENU_BG,
     IMAGE_AMOUNT
 };
 
 enum enum_anims_e {
-    ANIM_1,
+    CHANGE_CHANNEL,
     ANIM_AMOUNT
 };
 
+extern const info_button_t info[BUTTON_AMOUNT];
 extern const char *image_path[IMAGE_AMOUNT];
 extern const info_anim_t anim_info[ANIM_AMOUNT];
 extern const char* font_path[TEXT_AMOUNT];
 extern const char* music_path[MUSIC_AMOUNT];
 extern const char* sound_path[SOUND_AMOUNT];
 extern const int font_size[TEXT_AMOUNT];
+
+typedef struct button_s
+{
+    int (*trigger)(game_t *, int);
+    int option;
+    char *name;
+    image_t *base;
+    image_t *hover;
+    image_t *click;
+    image_t *display;
+    sound_t *click_sound;
+    sfVector2f pos;
+    sfVector2f display_pos;
+    enum enum_scene_e scene;
+    int mouse_hover;
+    int mouse_click;
+} button_t;
 
 #endif /* !DATA_H_ */

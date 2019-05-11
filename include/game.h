@@ -27,9 +27,13 @@
 struct game_s {
     window_t *window;
     text_t *texts[TEXT_AMOUNT];
-    music_t *music[MUSIC_AMOUNT];
+    assets_t *assets;
+    graph_t *graph;
+    music_t *musics[MUSIC_AMOUNT];
     sound_t *sounds[SOUND_AMOUNT];
+    button_t *buttons[BUTTON_AMOUNT];
     sfVector2i mouse_pos;
+    int sound;
     int exit;
 };
 
@@ -64,5 +68,21 @@ int analyse_events(game_t *game);
 int (*get_scene(void))(game_t *);
 enum enum_scene_e get_scene_id(void);
 void change_scene(enum enum_scene_e id);
+
+/* MANAGE BUTTONS */
+button_t *create_button(const info_button_t *info, window_t *window);
+button_t *find_button(game_t *game, char *name, enum enum_scene_e scene);
+void show_scene_buttons(game_t *game);
+
+/* BUTTONS FUNCTIONS */
+int exit_game(game_t *game, int a);
+
+/* INTERSECTIONS */
+int image_intersect(image_t *img1, image_t *img2);
+int point_intersect(image_t *img, float x, float y);
+int text_intersect(sfText *text, image_t *image);
+
+/* MENU */
+int manage_menu(game_t *game);
 
 #endif /* !GAME_H_ */

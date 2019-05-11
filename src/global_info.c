@@ -10,31 +10,30 @@
 #include "game.h"
 
 const char *image_path[IMAGE_AMOUNT] = {
-    // "assets/scenes/credit/long_board.png"
-    NULL,
+    "assets/backgrounds/main_menu.png",
 };
 
 const char *font_path[TEXT_AMOUNT] = {
-    // "assets/fonts/4.ttf"
-    NULL,
+    "assets/fonts/font.ttf",
 };
 
 const int font_size[TEXT_AMOUNT] = {
-    // 30
-    0,
+    12,
 };
 
 const info_anim_t anim_info[ANIM_AMOUNT] = {
-    {{11, 12}, {19, 40}, NULL},
+    {{30, 12}, {640, 360}, "assets/animations/change_tv.png"},
 };
 
 
-const char *music_paths[MUSIC_AMOUNT] = {
-    // "assets/musics/wild_base.ogg"
-    NULL,
+const char *music_path[MUSIC_AMOUNT] = {
+    "assets/musics/Main_Menu.wav",
 };
 
-const char *sound_paths[SOUND_AMOUNT] = {
-    // "assets/musics/wild_base.ogg"
-    NULL,
+const char *sound_path[SOUND_AMOUNT] = {
+    "assets/sounds/click.wav",
+};
+
+const info_button_t info[BUTTON_AMOUNT] = {
+    {{50, 148}, 0, MAIN_MENU, "play", exit_game},
 };

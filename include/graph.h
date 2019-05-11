@@ -96,11 +96,11 @@ void destroy_anim(anim_t *anim);
 
 /* SOUND */
 #define BASE_VOLUME 50
-sound_t *create_sound(char *path);
+sound_t *create_sound(const char *path);
 void destroy_sound(sound_t *sound);
 
 /* MUSIC */
-music_t *load_music(char *main_path);
+music_t *load_music(const char *main_path);
 void start_music(music_t *music);
 void destroy_music(music_t *music);
 

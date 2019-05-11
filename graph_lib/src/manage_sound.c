@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "graph.h"
 
-sound_t *create_sound(char *path)
+sound_t *create_sound(const char *path)
 {
     sound_t *sound = malloc(sizeof(sound_t));
 
