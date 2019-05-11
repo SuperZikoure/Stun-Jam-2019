@@ -56,6 +56,7 @@ void game_event(game_t *game)
         if (event.type == sfEvtClosed)
             sfRenderWindow_close(game->window);
     }
+    graph_event_clicked(game->graph, game->window);
 }
 
 void game_destroy(game_t *game)

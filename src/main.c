@@ -10,8 +10,7 @@
 
 sfRenderWindow *init_window(void)
 {
-    //sfVideoMode mode = {1280, 720, 32};
-    sfVideoMode mode = {700, 700, 32};
+    sfVideoMode mode = {1280, 720, 32};
     sfRenderWindow *window;
 
     window = sfRenderWindow_create(mode, "game", sfClose, NULL);

@@ -49,7 +49,8 @@ SRC			=	asset/assets.c \
 				graph/graph_draw_engine.c \
 				graph/node_event.c \
 				graph/graph_draw_tools.c \
-				graph/graph_operation.c
+				graph/graph_operation.c \
+				graph/graph_event.c
 
 SRC_LIB		=	graphmy \
 				graph \
