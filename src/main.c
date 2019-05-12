@@ -63,6 +63,7 @@ static game_t create_game(void)
     game.turn = 0;
     game.game_state = 0;
     game.timer = 0;
+    game.change = 0;
     fill_nodes(&game);
     return (game);
 }

@@ -30,6 +30,8 @@ typedef struct info_button_s info_button_t;
 #define SCREEN_POS V2F(912, 404)
 #define TV_POS V2F(768, 328)
 
+#define FRAMES_TV 120
+
 struct info_anim_s
 {
     sfVector2f fps;
@@ -97,7 +99,7 @@ enum enum_anims_e {
     CHAN_1,
     CHAN_2,
     AD_1,
-    AD2,
+    AD_2,
     ANIM_AMOUNT
 };
 

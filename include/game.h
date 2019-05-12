@@ -47,6 +47,7 @@ struct game_s {
     sfVector2i mouse_pos;
     bool should_exit;
     int sound;
+    int change;
     int exit;
 };
 
