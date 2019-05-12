@@ -62,6 +62,6 @@ void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph, game_t *ga
     }
     if (graph->stream != NULL) {
         if (can_be_drawn(graph->stream, game))
-            display_image(get_image(ON_AIR), graph->stream->pos);
+            display_image(get_image(ON_AIR), V2F(graph->stream->pos.x + 32, graph->stream->pos.y + 34));
     }
 }

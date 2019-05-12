@@ -23,12 +23,11 @@ void change_stream(game_t *game)
     link_t *current = game->graph->nodes->start;
     node_t *current_content;
 
-    for (int i = 0; i > NB_NODE; i++) {
+    for (int i = 0; i < random; i++) {
         current = current->next;
     }
         current_content = (node_t*)current->content;
     game->graph->stream = current_content;
-    printf("WOW");
 }
 
 
@@ -48,7 +47,7 @@ void update_game(game_t *game)
         game->players[game->turn + 1].money += get_money(game);
         game->turn = (game->turn == 1) ? 0 : 1;
         game->players[game->turn + 1].can_buy = 1;
-        if (!game->turn)
+        if (game->turn == 1)
             change_stream(game);
     }
     if (game->game_state) {

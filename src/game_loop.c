@@ -10,6 +10,7 @@
 void game_loop(game_t *game)
 {
     start_clock();
+    change_stream(game);
     while (sfRenderWindow_isOpen(game->window->window) && !game->exit) {
         start_new_frame();
         if (!sfRenderWindow_hasFocus(game->window->window))
