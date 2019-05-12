@@ -32,7 +32,7 @@ node_t *node_create(int x, int y, assets_t *assets)
     id++;
     new->owner = NEUTRAL;
     new->defense = 0;
-    new->attack = 0;
+    new->boost = 0;
     new->pos = (sfVector2f){x, y};
     new->links = vector_create();
     return (new);

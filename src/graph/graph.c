@@ -23,6 +23,7 @@ graph_t *graph_create(void)
 
     new->nodes = vector_create();
     new->selected = NULL;
+    new->skill = NULL;
     return (new);
 }
 

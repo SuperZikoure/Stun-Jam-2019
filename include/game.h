@@ -85,6 +85,8 @@ int exit_game(game_t *game, int a);
 int put_scene(game_t *game, int a);
 int change_sound(game_t *game, int a);
 int buy_skill(game_t *game, int a);
+int end_turn(game_t *game, int a);
+int use_skill(game_t *game, int a);
 
 /* INTERSECTIONS */
 int image_intersect(image_t *img1, image_t *img2);
@@ -114,6 +116,9 @@ static const sfVector2i pos_nodes[] = {
 
 void game_fill_graph(game_t *game);
 void game_destroy(game_t game);
+
+// graph_draw_engine.c
+void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph, game_t *game);
 
 // SCENES // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 

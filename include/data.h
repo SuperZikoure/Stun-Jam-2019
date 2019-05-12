@@ -27,6 +27,7 @@ typedef struct info_button_s info_button_t;
 #define BUTTON_PATH ("assets/buttons/")
 #define BUTTON_AMOUNT 12
 
+#define SCREEN_POS V2F(912, 404)
 #define TV_POS V2F(768, 328)
 
 struct info_anim_s
@@ -59,6 +60,7 @@ enum enum_text_e
 {
     TEXT,
     SMALL,
+    VERY_SMALL,
     TEXT_AMOUNT
 };
 
@@ -80,11 +82,21 @@ enum enum_images_e {
     GAME_BG,
     BLACK_BG,
     TV_BG,
+    DEF_1,
+    DEF_2,
+    DEF_3,
+    BOOST_1,
+    BOOST_2,
+    BOOST_3,
     IMAGE_AMOUNT
 };
 
 enum enum_anims_e {
     CHANGE_CHANNEL,
+    CHAN_1,
+    CHAN_2,
+    AD_1,
+    AD2,
     ANIM_AMOUNT
 };
 

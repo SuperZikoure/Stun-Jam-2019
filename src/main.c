@@ -9,6 +9,18 @@
 #include "game.h"
 #include "my_str.h"
 
+static void fill_nodes(game_t *game)
+{
+    link_t *current = game->graph->nodes->end;
+    node_t *current_content;
+
+    current_content = (node_t*)current->prev->prev->prev->content;
+    current_content->owner = PLAYER1;
+    current = game->graph->nodes->end;
+    current_content = (node_t*)current->content;
+    current_content->owner = PLAYER2;
+}
+
 player_t fill_player(void) {
     player_t player;
 
@@ -49,6 +61,7 @@ static game_t create_game(void)
     game.turn = 0;
     game.game_state = 0;
     game.timer = 0;
+    fill_nodes(&game);
     return (game);
 }
 

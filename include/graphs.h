@@ -25,7 +25,7 @@ struct node {
     sfVector2f pos;
     int owner;
     int defense;
-    int attack;
+    int boost;
     sfSprite *sprites[3][3];
 };
 typedef struct node node_t;
@@ -33,15 +33,13 @@ typedef struct node node_t;
 struct graph {
     vector_t *nodes;
     node_t *selected;
+    node_t *skill;
 };
 typedef struct graph graph_t;
 
 // graph.c
 graph_t *graph_create(void);
 void graph_destroy(graph_t *graph);
-
-// graph_draw_engine.c
-void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph);
 
 // graph_operation.c
 node_t *graph_get_node_by_id(graph_t *graph, int id);

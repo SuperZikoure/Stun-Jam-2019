@@ -20,4 +20,12 @@ void graph_event_clicked(graph_t *graph, sfRenderWindow *window)
             graph->selected = current_content;
         current = current->next;
     }
+    current = graph->nodes->start;
+    while (current) {
+        current_content = (node_t*)current->content;
+        if (node_isClicked(current_content, window)) {
+            graph->skill = current_content;
+        }
+        current = current->next;
+    }
 }

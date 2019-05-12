@@ -30,3 +30,28 @@ int buy_skill(game_t *game, int a)
     }
     return (0);
 }
+
+int end_turn(game_t *game, int a)
+{
+    game->timer = 0;
+    return 0;
+}
+
+int use_skill(game_t *game, int a)
+{
+    if (game->players[game->turn + 1].skills[a] > 0 && game->graph->skill != NULL && a == 1 && game->graph->skill->owner != NEUTRAL) {
+        game->players[game->turn + 1].skills[a] -= 1;
+        if (game->graph->skill->defense)
+            game->graph->skill->defense -= 1;
+        else
+            game->graph->skill->owner = NEUTRAL;
+    }
+    if (game->players[game->turn + 1].skills[a] > 0 && game->graph->skill != NULL && a == 0 && game->graph->skill->defense < 3) {
+        game->players[game->turn + 1].skills[a] -= 1;
+        game->graph->skill->defense += 1;
+    }
+    if (game->players[game->turn + 1].skills[a] > 0 && game->graph->skill != NULL && a == 2 && game->graph->skill->boost < 3) {
+        game->players[game->turn + 1].skills[a] -= 1;
+        game->graph->skill->boost += 1;
+    }
+}
