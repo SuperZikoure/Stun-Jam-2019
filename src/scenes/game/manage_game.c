@@ -70,6 +70,9 @@ void update_game(game_t *game)
     }
     if (game->game_state)
         game->change -= (game->change > 0) ? get_delta() : 0;
+    if (game->players[game->turn + 1].money >= 400) {
+        change_scene(WIN);
+    }
 }
 
 void display_skills(game_t *game) {
