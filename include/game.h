@@ -116,6 +116,7 @@ static const sfVector2i pos_nodes[] = {
 
 void game_fill_graph(game_t *game);
 void game_destroy(game_t game);
+void change_stream(game_t *game);
 
 // graph_draw_engine.c
 void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph, game_t *game);

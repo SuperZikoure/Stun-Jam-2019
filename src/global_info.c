@@ -19,7 +19,8 @@ const char *image_path[IMAGE_AMOUNT] = {
     "assets/nodes/shield_2.png",
     "assets/nodes/boost_0.png",
     "assets/nodes/boost_1.png",
-    "assets/nodes/boost_2.png"
+    "assets/nodes/boost_2.png",
+    "assets/nodes/boosted.png"
 };
 
 const char *font_path[TEXT_AMOUNT] = {

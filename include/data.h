@@ -88,6 +88,7 @@ enum enum_images_e {
     BOOST_1,
     BOOST_2,
     BOOST_3,
+    ON_AIR,
     IMAGE_AMOUNT
 };
 

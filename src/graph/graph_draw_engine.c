@@ -60,4 +60,8 @@ void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph, game_t *ga
         if (can_be_drawn(graph->skill, game))
             sfRenderWindow_drawSprite(window, to_draw, NULL);
     }
+    if (graph->stream != NULL) {
+        if (can_be_drawn(graph->stream, game))
+            display_image(get_image(ON_AIR), graph->stream->pos);
+    }
 }

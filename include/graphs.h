@@ -34,6 +34,7 @@ struct graph {
     vector_t *nodes;
     node_t *selected;
     node_t *skill;
+    node_t *stream;
 };
 typedef struct graph graph_t;
 

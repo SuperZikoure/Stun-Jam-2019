@@ -6,7 +6,9 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "game.h"
+#include <time.h>
 #include "my_str.h"
 
 static void fill_nodes(game_t *game)
@@ -79,6 +81,7 @@ static int game_main(void)
 {
     game_t game = create_game();
 
+    srand(time(NULL));
     if (fill_image(game.window) == -1 || fill_anim(game.window) == -1)
         return 84;
     change_scene(MAIN_MENU);
