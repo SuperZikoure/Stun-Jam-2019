@@ -29,8 +29,10 @@ static void manage_button(button_t *b, game_t *game)
     if (sfMouse_isButtonPressed(sfMouseLeft) && b->mouse_hover)
         b->mouse_click = 1;
     if (!sfMouse_isButtonPressed(sfMouseLeft) && b->mouse_hover && b->mouse_click) {
-        if (game->sound)
+        if (game->sound) {
+            sfSound_stop(b->click_sound->sound);
             sfSound_play(b->click_sound->sound);
+        }
         b->trigger(game, b->option);
         b->mouse_click = 0;
     }

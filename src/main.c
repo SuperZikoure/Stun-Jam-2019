@@ -9,6 +9,20 @@
 #include "game.h"
 #include "my_str.h"
 
+player_t fill_player(void) {
+    player_t player;
+
+    player.money = 0;
+    player.skills[0] = 0;
+    player.skills[1] = 0;
+    player.skills[2] = 0;
+    player.can_buy = 1;
+    player.used[0] = 0;
+    player.used[1] = 0;
+    player.used[2] = 0;
+    return player;
+}
+
 static game_t create_game(void)
 {
     game_t game;
@@ -30,8 +44,12 @@ static game_t create_game(void)
     game.sound = 1;
     game.should_exit = false;
     game.exit = 0;
+    game.players[PLAYER1] = fill_player();
+    game.players[PLAYER2] = fill_player();
+    game.turn = 0;
+    game.game_state = 0;
+    game.timer = 0;
     return (game);
-
 }
 
 static bool has_display_env_variable(char const *env[])

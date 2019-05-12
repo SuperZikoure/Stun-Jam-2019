@@ -25,7 +25,7 @@ typedef struct info_button_s info_button_t;
 #define DELETE -1
 #define SCREENSHOT_FILENAME_MAX 10
 #define BUTTON_PATH ("assets/buttons/")
-#define BUTTON_AMOUNT 5
+#define BUTTON_AMOUNT 12
 
 #define TV_POS V2F(768, 328)
 
@@ -58,6 +58,7 @@ struct info_button_s
 enum enum_text_e
 {
     TEXT,
+    SMALL,
     TEXT_AMOUNT
 };
 

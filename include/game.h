@@ -24,6 +24,13 @@
     bool should_exit;
 }*/
 
+typedef struct player_s {
+    int money;
+    int skills[3];
+    int can_buy;
+    int used[3];
+} player_t;
+
 struct game_s {
     window_t *window;
     text_t *texts[TEXT_AMOUNT];
@@ -32,6 +39,11 @@ struct game_s {
     music_t *musics[MUSIC_AMOUNT];
     sound_t *sounds[SOUND_AMOUNT];
     button_t *buttons[BUTTON_AMOUNT];
+    player_t players[3];
+    int timer;
+    int turn;
+    int space_pressed;
+    int game_state;
     sfVector2i mouse_pos;
     bool should_exit;
     int sound;
@@ -71,6 +83,8 @@ void show_scene_buttons(game_t *game);
 /* BUTTONS FUNCTIONS */
 int exit_game(game_t *game, int a);
 int put_scene(game_t *game, int a);
+int change_sound(game_t *game, int a);
+int buy_skill(game_t *game, int a);
 
 /* INTERSECTIONS */
 int image_intersect(image_t *img1, image_t *img2);

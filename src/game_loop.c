@@ -21,7 +21,7 @@ void game_loop(game_t *game)
         sfRenderWindow_clear(game->window->window, sfBlack);
         if (get_scene()(game) == -1)
             game->exit = -1;
-        show_scene_buttons(game);
+        game->space_pressed = 0;
         sfRenderWindow_display(game->window->window);
     }
     if (sfRenderWindow_isOpen(game->window->window))

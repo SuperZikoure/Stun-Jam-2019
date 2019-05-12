@@ -18,10 +18,12 @@ const char *image_path[IMAGE_AMOUNT] = {
 
 const char *font_path[TEXT_AMOUNT] = {
     "assets/fonts/font.ttf",
+    "assets/fonts/font.ttf"
 };
 
 const int font_size[TEXT_AMOUNT] = {
-    12,
+    32,
+    18,
 };
 
 const info_anim_t anim_info[ANIM_AMOUNT] = {
@@ -42,5 +44,12 @@ const info_button_t info[BUTTON_AMOUNT] = {
     {{50, 250}, HOW_TO_PLAY, MAIN_MENU, "help", put_scene},
     {{50, 350}, 0, MAIN_MENU, "exit", exit_game},
     {{25, 650}, CREDITS, MAIN_MENU, "credits", put_scene},
-    {{100, 650}, 0, MAIN_MENU, "sound", exit_game}
+    {{100, 650}, 0, MAIN_MENU, "sound", change_sound},
+    {{768, 0}, 0, GAME, "end", change_sound},
+    {{1180, 88}, 0, GAME, "buy", buy_skill},
+    {{1180, 165}, 1, GAME, "buy", buy_skill},
+    {{1180, 241}, 2, GAME, "buy", buy_skill},
+    {{1080, 88}, 0, GAME, "use", change_sound},
+    {{1080, 165}, 1, GAME, "use", change_sound},
+    {{1080, 241}, 2, GAME, "use", change_sound}
 };
