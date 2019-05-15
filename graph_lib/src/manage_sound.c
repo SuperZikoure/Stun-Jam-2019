@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** My_RPG
-** File description:
-** sound.c
-*/
-
 #include <stdlib.h>
 #include "graph.h"
 

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** main
-** File description:
-** main
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "game.h"

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** stringmy
-** File description:
-** my_strtok
-*/
-
 #include "my_str.h"
 
 void remove_both_caracter(char **src, char to_remove)

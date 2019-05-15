@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** My_RPG
-** File description:
-** input.c
-*/
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "graph.h"

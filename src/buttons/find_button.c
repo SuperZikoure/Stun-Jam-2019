@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** MUL_my_rpg_2018
-** File description:
-** find_button
-*/
-
 #include "game.h"
 
 button_t *find_button(game_t *game, char *name, enum enum_scene_e scene)

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** my_atoi
-** File description:
-** convert str to int
-*/
-
 #include "my_str.h"
 
 static int s_pow(int nb, int power)

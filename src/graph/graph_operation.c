@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** Stun-Jam-2019
-** File description:
-** graph_operation
-*/
-
 #include "graphs.h"
 
 node_t *graph_get_node_by_id(graph_t *graph, int id)

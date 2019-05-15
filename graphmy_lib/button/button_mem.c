@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** button
-*/
-
 #include "my_button.h"
 
 static void *smalloc(size_t size)

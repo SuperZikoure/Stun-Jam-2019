@@ -1,9 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** my_str_isneg
-** File description:
-** know if an str is neg or not (mathematic sense)
-*/
 #include "my_str.h"
 
 int my_str_isneg(char const *str)

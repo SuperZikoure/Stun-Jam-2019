@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** Stun-Jam-2019
-** File description:
-** game_init
-*/
-
 #include "game.h"
 
 void game_fill_graph(game_t *game)

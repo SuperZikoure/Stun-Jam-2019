@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** my_strreplace
-** File description:
-** my_strreplace
-*/
-
 #include "my_str.h"
 
 static void *smalloc(size_t size)

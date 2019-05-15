@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** Stun-Jam-2019
-** File description:
-** graphs
-*/
-
 #ifndef GRAPHS_H_
 #define GRAPHS_H_
 

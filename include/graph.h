@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** My_RPG
-** File description:
-** graph.h
-*/
-
 #ifndef __GRAPH_H__
 #define __GRAPH_H__
 

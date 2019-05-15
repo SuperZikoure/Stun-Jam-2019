@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** Stun-Jam-2019
-** File description:
-** graph_draw_engine
-*/
-
 #include "game.h"
 #include "graphs.h"
 

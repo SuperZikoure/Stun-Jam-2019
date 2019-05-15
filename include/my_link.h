@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** libmy
-** File description:
-** my_chained
-*/
-
 #ifndef MY_CHAINED_H_
 #define MY_CHAINED_H_
 

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** MUL_my_rpg_2018
-** File description:
-** create_button
-*/
-
 #include <stdlib.h>
 #include "game.h"
 #include "my_str.h"

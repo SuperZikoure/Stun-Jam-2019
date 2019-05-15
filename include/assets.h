@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** Stun-Jam-2019
-** File description:
-** assets
-*/
-
 #ifndef ASSETS_H_
 #define ASSETS_H_
 

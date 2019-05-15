@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** dragndrop_event
-*/
-
 #include "my_dragndrop.h"
 
 my_bool_t dragndrop_isClicked(dragndrop_t *drag, sfRenderWindow *window)

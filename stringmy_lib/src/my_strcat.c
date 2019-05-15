@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** my_strcat
-** File description:
-** concatenate 2 str
-*/
-
 #include "my_str.h"
 
 char *my_strcat_no_free(const char *left, const char *right)

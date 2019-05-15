@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** MUL_my_rpg_2018
-** File description:
-** info.c
-*/
-
 #include "graph.h"
 #include "macros.h"
 #include "game.h"

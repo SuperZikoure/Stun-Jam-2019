@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** MUL_my_rpg_2018
-** File description:
-** do_screenshot
-*/
-
 #include <stdlib.h>
 #include <dirent.h>
 #include "my_str.h"

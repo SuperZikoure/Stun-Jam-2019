@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** libmy
-** File description:
-** my_vector
-*/
-
 #ifndef MY_VECTOR_H_
 #define MY_VECTOR_H_
 

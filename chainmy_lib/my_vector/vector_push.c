@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** chainmy
-** File description:
-** vector
-*/
-
 #include "my_vector.h"
 
 static void *smalloc(size_t size)

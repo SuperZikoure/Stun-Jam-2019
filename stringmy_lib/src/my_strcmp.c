@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** my_strcmp
-** File description:
-** compare 2 strings
-*/
-
 #include "my_str.h"
 
 my_bool_t my_strcmp(char const *s1, char const *s2)

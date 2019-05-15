@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** My_RPG
-** File description:
-** window.c
-*/
-
 #include <stdlib.h>
 #include <stdbool.h>
 #include "graph.h"

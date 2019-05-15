@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** MUL_my_rpg_2018
-** File description:
-** manage_button
-*/
-
 #include "game.h"
 
 static void manage_button2(button_t *button)

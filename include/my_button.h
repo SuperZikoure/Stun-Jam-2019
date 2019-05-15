@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** my_button
-*/
-
 #ifndef MY_BUTTON_H_
 #define MY_BUTTON_H_
 

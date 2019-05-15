@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** Stun-Jam-2019
-** File description:
-** game
-*/
-
 #ifndef GAME_H_
 #define GAME_H_
 

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** MUL_my_rpg_2018
-** File description:
-** get_frame_nb
-*/
-
 #include "macros.h"
 #include "graph.h"
 

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** my_strdup
-** File description:
-** my_strdup
-*/
-
 #include "my_str.h"
 
 static void *smalloc(size_t size)

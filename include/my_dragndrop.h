@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** my_drandrop
-*/
-
 #ifndef MY_DRANDROP_H_
 #define MY_DRANDROP_H_
 

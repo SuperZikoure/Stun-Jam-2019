@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** my_count_line
-** File description:
-** my_count_line
-*/
-
 #include "my_str.h"
 
 int my_count_line(char const *str)

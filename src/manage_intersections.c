@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** MUL_my_rpg_2018
-** File description:
-** manage_intersections.c
-*/
-
 #include "game.h"
 
 int text_intersect(sfText *text, image_t *image)

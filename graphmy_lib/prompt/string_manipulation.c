@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** string_manipulation
-*/
-
 #include "my_prompt.h"
 
 void my_prompt_str_pop(my_prompt_t *prompt)

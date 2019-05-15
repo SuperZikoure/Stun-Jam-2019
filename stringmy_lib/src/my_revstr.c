@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** my_revstr
-** File description:
-** reverse an string
-*/
-
 #include "my_str.h"
 
 char *my_revstr(char *str)

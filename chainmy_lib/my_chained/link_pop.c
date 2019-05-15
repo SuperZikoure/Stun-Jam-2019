@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** chainmy
-** File description:
-** link_pop
-*/
-
 #include "my_link.h"
 
 void link_pop_me(link_t *link)

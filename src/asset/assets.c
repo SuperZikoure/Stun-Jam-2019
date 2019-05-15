@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** Stun-Jam-2019
-** File description:
-** assets
-*/
-
 #include "assets.h"
 
 static void *smalloc(size_t size)

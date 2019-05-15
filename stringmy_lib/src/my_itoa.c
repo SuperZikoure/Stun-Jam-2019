@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** my_iota
-** File description:
-** convert int to char
-*/
-
 #include "my_str.h"
 
 static void *smalloc(size_t size)

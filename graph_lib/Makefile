@@ -1,10 +1,3 @@
-##
-## EPITECH PROJECT, 2018
-## Fairefichier
-## File description:
-## This is a fairefichier
-##
-
 ECHO	=	/bin/echo -e
 DEFAULT	=	"\e[0m"
 BOLD_T	=	"\e[1m"

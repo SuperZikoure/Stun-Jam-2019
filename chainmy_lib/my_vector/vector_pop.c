@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** chainmy
-** File description:
-** vector_pop
-*/
-
 #include "my_vector.h"
 
 void vector_pop_me(vector_t *vect, link_t *node)

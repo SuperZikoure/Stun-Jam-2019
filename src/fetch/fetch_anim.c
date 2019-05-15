@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** MUL_my_rpg_2018
-** File description:
-** fetch_anim.c
-*/
-
 #include <stdlib.h>
 #include <math.h>
 #include "game.h"

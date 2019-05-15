@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** libmy
-** File description:
-** link
-*/
-
 #include "my_link.h"
 #include <stdlib.h>
 #include <stddef.h>

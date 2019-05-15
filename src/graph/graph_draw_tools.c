@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** Stun-Jam-2019
-** File description:
-** graph_draw_tools
-*/
-
 #include "graphs.h"
 #define M_PI       3.14159265358979323846
 #define DEG(c) (c * (180/M_PI))

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** dragndrop_mem
-*/
-
 #include "my_dragndrop.h"
 
 static void *smalloc(size_t size)

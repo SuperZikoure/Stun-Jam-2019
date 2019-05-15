@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** alloc_animated
-** File description:
-** alloc animated
-*/
-
 #include "my_animated_sprite.h"
 
 static void *smalloc(size_t size)

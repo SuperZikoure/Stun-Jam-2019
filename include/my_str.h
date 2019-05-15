@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** my_str.h
-** File description:
-** contain all prototype of functions for str & char operation
-*/
-
 #ifndef MY_STR_H
 #define MY_STR_H
 

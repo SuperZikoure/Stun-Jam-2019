@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** texture
-** File description:
-** texture
-*/
-
 #ifndef TEXTURE_H_
 #define TEXTURE_H_
 

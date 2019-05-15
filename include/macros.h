@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** STUN FEST JAM
-** File description:
-** macros
-*/
-
 #ifndef MACROS_H_
 #define MACROS_H_
 

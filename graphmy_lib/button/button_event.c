@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** button_event
-*/
-
 #include "my_button.h"
 
 my_bool_t my_button_is_hover(my_button_t *button, sfRenderWindow *relative)

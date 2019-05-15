@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** libmy
-** File description:
-** my_char_is
-*/
-
 #include "my_str.h"
 
 my_bool_t my_char_isletter(char c)

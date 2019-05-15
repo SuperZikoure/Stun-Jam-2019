@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** my_prompt
-*/
-
 #ifndef MY_PROMPT_H_
 #define MY_PROMPT_H_
 

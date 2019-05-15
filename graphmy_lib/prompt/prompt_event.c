@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** prompt_event
-*/
-
 #include "my_prompt.h"
 
 static my_bool_t my_prompt_is_hover(my_prompt_t *prompt, sfRenderWindow *rel)

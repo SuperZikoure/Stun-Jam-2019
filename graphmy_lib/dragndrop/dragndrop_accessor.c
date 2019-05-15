@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** dragndrop_accessor
-*/
-
 #include "my_dragndrop.h"
 
 my_bool_t dragndrop_ispendingDrag(dragndrop_t *drag)

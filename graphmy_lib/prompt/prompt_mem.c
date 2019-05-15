@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** mygraphlib
-** File description:
-** prompt_mem
-*/
-
 #include "my_prompt.h"
 
 static void *smalloc(size_t size)

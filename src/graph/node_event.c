@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2019
-** Stun-Jam-2019
-** File description:
-** node_event
-*/
-
 #include "graphs.h"
 #include "game.h"
 
