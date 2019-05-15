@@ -2,7 +2,7 @@
 
 void update_win(game_t *game)
 {
-
+    set_music(game, WIN_MUSIC);
 }
 
 void display_win(game_t *game)
