@@ -11,6 +11,8 @@ int exit_game(game_t *game, int a)
 int put_scene(game_t *game, int a)
 {
     change_scene(a);
+    if (a == GAME)
+        game->timer = TIMER_START;
     return (0);
 }
 
@@ -54,4 +56,5 @@ int use_skill(game_t *game, int a)
         game->players[game->turn + 1].skills[a] -= 1;
         game->graph->skill->boost += 1;
     }
+    return 0;
 }

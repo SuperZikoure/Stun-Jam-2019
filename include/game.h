@@ -8,10 +8,10 @@
 #ifndef GAME_H_
 #define GAME_H_
 
+#include "data.h"
 #include "assets.h"
 #include "graphs.h"
 #include "graph.h"
-#include "data.h"
 #include "macros.h"
 #include <stdbool.h>
 #include <stdlib.h>
@@ -41,6 +41,7 @@ struct game_s {
     button_t *buttons[BUTTON_AMOUNT];
     player_t players[3];
     int timer;
+    int countdown;
     int turn;
     int space_pressed;
     int game_state;
@@ -48,6 +49,7 @@ struct game_s {
     bool should_exit;
     int sound;
     int change;
+    int win;
     int exit;
 };
 
@@ -69,6 +71,8 @@ void start_new_frame(void);
 void game_loop(game_t *game);
 int analyse_events(game_t *game);
 
+/* MUSICS */
+void set_music(game_t *game, int index);
 
 /* SCENES */
 
@@ -120,6 +124,7 @@ void game_destroy(game_t game);
 void change_stream(game_t *game);
 
 // graph_draw_engine.c
+int can_be_drawn(node_t *node, game_t *game);
 void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph, game_t *game);
 
 // SCENES // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

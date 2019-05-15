@@ -62,8 +62,10 @@ static game_t create_game(void)
     game.players[PLAYER2] = fill_player();
     game.turn = 0;
     game.game_state = 0;
-    game.timer = 0;
+    game.timer = TIMER_START;
+    game.countdown = COUNTDOWN_START;
     game.change = 0;
+    game.win = 0;
     fill_nodes(&game);
     return (game);
 }

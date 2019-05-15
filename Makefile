@@ -29,7 +29,7 @@ LIGHT_MAGEN	=	"\e[95m"
 LIGHT_CYAN	=	"\e[96m"
 LINE_RETURN	=	$(ECHO) ""
 
-NAME		=	game
+NAME		=	TVLink
 COLOR_THEME	=	$(YELLO_C)
 
 ROOT_PATH	=	./

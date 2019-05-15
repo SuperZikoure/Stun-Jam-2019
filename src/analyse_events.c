@@ -21,6 +21,10 @@ int analyse_events(game_t *game)
         if (event.type == sfEvtKeyPressed && sfKeyboard_isKeyPressed(sfKeySpace)) {
             game->space_pressed = 1;
         }
+        if (event.type == sfEvtKeyPressed && sfKeyboard_isKeyPressed(sfKeyEscape)) {
+            if (get_scene_id() == HOW_TO_PLAY || get_scene_id() == CREDITS)
+                change_scene(MAIN_MENU);
+        }
     }
     return 0;
 }

@@ -46,10 +46,17 @@ const info_anim_t anim_info[ANIM_AMOUNT] = {
 
 const char *music_path[MUSIC_AMOUNT] = {
     "assets/musics/Main_Menu.wav",
+    "assets/musics/Game_1.wav",
+    "assets/musics/Game_2.wav",
+    "assets/musics/Game_3.wav",
+    "assets/musics/Game_4.wav",
+    "assets/musics/Pause.wav",
+    "assets/musics/Win.wav",
 };
 
 const char *sound_path[SOUND_AMOUNT] = {
     "assets/sounds/click.wav",
+    "assets/musics/Chrono.wav"
 };
 
 const info_button_t info[BUTTON_AMOUNT] = {

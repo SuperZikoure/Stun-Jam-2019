@@ -2,7 +2,7 @@
 
 void update_menu(game_t *game)
 {
-
+    set_music(game, MENU_MUSIC);
 }
 
 void display_menu(game_t *game)

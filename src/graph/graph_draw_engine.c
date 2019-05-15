@@ -39,7 +39,7 @@ void sfRenderWindow_drawGraph(sfRenderWindow *window, graph_t *graph, game_t *ga
     while (current) {
         current_content = (node_t*)current->content;
         if ((current_content->owner == game->turn + 1 || can_be_drawn(current_content, game))) {
-            sfRenderWindow_drawNode(window, current_content);
+            sfRenderWindow_drawNode(window, current_content, game);
             if (current_content->defense)
                 display_image(get_image(DEF_1 + (current_content->defense - 1)), current_content->pos);
         if (current_content->boost)

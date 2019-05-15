@@ -32,6 +32,11 @@ typedef struct info_button_s info_button_t;
 
 #define FRAMES_TV 120
 
+#define TIMER_START 1821
+#define COUNTDOWN_START 150
+
+#define WIN_MONEY 300
+
 struct info_anim_s
 {
     sfVector2f fps;
@@ -69,6 +74,7 @@ enum enum_text_e
 enum enum_sound_e
 {
     CLICK_FX,
+    CHRONO_FX,
     SOUND_AMOUNT
 };
 
@@ -76,6 +82,12 @@ enum enum_sound_e
 enum enum_music_e
 {
     MENU_MUSIC,
+    GAME_1_MUSIC,
+    GAME_2_MUSIC,
+    GAME_3_MUSIC,
+    GAME_4_MUSIC,
+    PAUSE_MUSIC,
+    WIN_MUSIC,
     MUSIC_AMOUNT
 };
 

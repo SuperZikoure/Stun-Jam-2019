@@ -38,14 +38,14 @@ node_t *node_create(int x, int y, assets_t *assets)
     return (new);
 }
 
-void sfRenderWindow_drawNode(sfRenderWindow *window, node_t *node)
+void sfRenderWindow_drawNode(sfRenderWindow *window, node_t *node, game_t *game)
 {
     sfSprite *to_draw;
     int state;
 
-    if (node_isClicked(node, window))
+    if (node_isClicked(node, window, game))
         state = CLICKED;
-    else if (node_isHover(node, window))
+    else if (node_isHover(node, window, game))
         state = HOVER;
     else
         state = IDLE;
