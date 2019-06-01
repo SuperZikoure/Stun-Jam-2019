@@ -1,4 +1,4 @@
-# Impact_Jam
+# Stun Jam
 Repository for our project for the StunJam 2019. (https://itch.io/jam/stunjam-2019)
 
 Link for the project :
